@@ -20,13 +20,6 @@ growing list of problems* — so you can act before it becomes a crisis. That re
 and history is the piece nobody ships. This tool is that missing piece: a run series, a health
 score, a trend, and a ranked "act now" list of the specs sliding the wrong way.
 
-Part of the [API Commons](https://apicommons.org/tools/) tools, alongside
-[Governance Coverage](https://github.com/api-commons/governance-coverage),
-[Governance Waivers](https://github.com/api-commons/governance-waivers),
-[API Validator](https://github.com/api-commons/api-validator),
-[API Governance Graph](https://github.com/api-commons/api-governance-graph), and
-[Spectral Ruleset Studio](https://github.com/api-commons/spectral-ruleset-studio).
-
 ## The run series
 
 A history is a small, machine-readable list of dated governance snapshots, each snapshot a set
@@ -98,6 +91,17 @@ snapshots across four specs showing both improving and degrading trends.
 
 Everything runs client-side. The history and Spectral output you paste never leave the page —
 there is no server.
+
+## Part of API Commons
+
+An open, browser-first tool from **[API Commons](https://apicommons.org)** — free, no backend, your data stays in your browser. Browse the full set at **[apicommons.org/tools](https://apicommons.org/tools/)**.
+
+**Related tools**
+- [Governance Baseline](https://baseline.apicommons.org) — adopt governance on a legacy estate; fail only new violations
+- [Governance Coverage](https://coverage.apicommons.org) — how much of your API your rules actually check
+- [Governance Waivers](https://waivers.apicommons.org) — sanctioned, owned, expiring governance exceptions
+- [Governance Pipeline Auditor](https://auditor.apicommons.org) — audit a repo's Spectral CI maturity
+- [Spectral Reporter](https://reporter.apicommons.org) — Spectral JSON → self-contained HTML report
 
 ---
 
