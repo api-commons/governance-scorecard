@@ -1,0 +1,8 @@
+[
+  { "code": "operation-tags", "message": "Operation must have tags.", "severity": 0, "source": "legacy-api", "path": ["paths", "/v1/legacy", "get", "tags"] },
+  { "code": "operation-operationId", "message": "Operation must have an operationId.", "severity": 0, "source": "legacy-api", "path": ["paths", "/v1/legacy", "post"] },
+  { "code": "operation-description", "message": "Operation must have a description.", "severity": 1, "source": "legacy-api", "path": ["paths", "/v1/legacy", "post", "description"] },
+  { "code": "info-contact", "message": "Info object must have a contact.", "severity": 1, "source": "legacy-api", "path": ["info"] },
+  { "code": "oas3-unused-component", "message": "Component is not referenced.", "severity": 2, "source": "legacy-api", "path": ["components", "schemas", "Deprecated"] },
+  { "code": "operation-description", "message": "Operation must have a description.", "severity": 1, "source": "payments-api", "path": ["paths", "/charges", "post", "description"] }
+]

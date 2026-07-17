@@ -1,0 +1,46 @@
+version: "0.1"
+# Six monthly governance snapshots across four specs. payments-api and
+# invoices-api are improving; users-api is slowly degrading; legacy-api is the
+# "growing problem list" — its violation count climbs every month.
+snapshots:
+  - date: "2026-01-01"
+    specs:
+      - { name: payments-api, errors: 8, warnings: 12, infos: 5, ruleCount: 40, coverage: 0.60 }
+      - { name: invoices-api, errors: 4, warnings: 8, infos: 3, ruleCount: 38, coverage: 0.55 }
+      - { name: users-api,    errors: 1, warnings: 4, infos: 6, ruleCount: 36, coverage: 0.70 }
+      - { name: legacy-api,   errors: 2, warnings: 5, infos: 2, ruleCount: 30, coverage: 0.40 }
+
+  - date: "2026-02-01"
+    specs:
+      - { name: payments-api, errors: 6, warnings: 11, infos: 5, ruleCount: 40, coverage: 0.63 }
+      - { name: invoices-api, errors: 4, warnings: 7, infos: 3, ruleCount: 38, coverage: 0.57 }
+      - { name: users-api,    errors: 1, warnings: 5, infos: 6, ruleCount: 36, coverage: 0.70 }
+      - { name: legacy-api,   errors: 3, warnings: 6, infos: 3, ruleCount: 30, coverage: 0.40 }
+
+  - date: "2026-03-01"
+    specs:
+      - { name: payments-api, errors: 5, warnings: 9, infos: 4, ruleCount: 40, coverage: 0.68 }
+      - { name: invoices-api, errors: 3, warnings: 7, infos: 3, ruleCount: 38, coverage: 0.60 }
+      - { name: users-api,    errors: 2, warnings: 6, infos: 7, ruleCount: 36, coverage: 0.68 }
+      - { name: legacy-api,   errors: 4, warnings: 7, infos: 3, ruleCount: 30, coverage: 0.38 }
+
+  - date: "2026-04-01"
+    specs:
+      - { name: payments-api, errors: 3, warnings: 8, infos: 4, ruleCount: 40, coverage: 0.72 }
+      - { name: invoices-api, errors: 3, warnings: 6, infos: 2, ruleCount: 38, coverage: 0.62 }
+      - { name: users-api,    errors: 2, warnings: 7, infos: 8, ruleCount: 36, coverage: 0.66 }
+      - { name: legacy-api,   errors: 6, warnings: 8, infos: 4, ruleCount: 30, coverage: 0.35 }
+
+  - date: "2026-05-01"
+    specs:
+      - { name: payments-api, errors: 2, warnings: 6, infos: 3, ruleCount: 40, coverage: 0.78 }
+      - { name: invoices-api, errors: 2, warnings: 6, infos: 2, ruleCount: 38, coverage: 0.64 }
+      - { name: users-api,    errors: 3, warnings: 8, infos: 8, ruleCount: 36, coverage: 0.64 }
+      - { name: legacy-api,   errors: 7, warnings: 10, infos: 5, ruleCount: 30, coverage: 0.33 }
+
+  - date: "2026-06-01"
+    specs:
+      - { name: payments-api, errors: 1, warnings: 4, infos: 2, ruleCount: 40, coverage: 0.82 }
+      - { name: invoices-api, errors: 2, warnings: 5, infos: 2, ruleCount: 38, coverage: 0.66 }
+      - { name: users-api,    errors: 4, warnings: 9, infos: 9, ruleCount: 36, coverage: 0.62 }
+      - { name: legacy-api,   errors: 9, warnings: 12, infos: 6, ruleCount: 30, coverage: 0.30 }

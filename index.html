@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Governance Scorecard — the health trend of your API governance over time</title>
+    <meta name="description" content="Ingest a series of Spectral snapshots over time, compute a 0–100 health score per spec, and see trends and growing problem lists — the longitudinal governance view that point-in-time scorecards miss. Runs entirely in your browser." />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <!-- Google tag (gtag.js) — API Commons -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WNSPT4B4S8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-WNSPT4B4S8');
+    </script>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <strong>Governance Scorecard</strong>
+        <span class="tag">scorecard.apicommons.org</span>
+      </div>
+      <nav>
+        <a href="#" id="nav-about" title="Why health history matters">About</a>
+        <a href="https://apis.io" target="_blank" rel="noopener">APIs.io</a>
+        <a href="https://apicommons.org" target="_blank" rel="noopener">API Commons</a>
+        <a href="https://github.com/api-commons/governance-scorecard" target="_blank" rel="noopener">GitHub</a>
+        <button id="engage-ae" class="engage-btn" type="button" title="Work with API Evangelist on API governance">Get help</button>
+      </nav>
+    </header>
+    <!-- Laneworks ad network (ads.laneworks.net) -->
+    <script async src="https://ads.laneworks.net/embed.js"></script>
+    <div data-laneworks-ad="top-banner"></div>
+
+
+    <div class="toolbar">
+      <button class="measure-btn" id="score" type="button">Score ▸</button>
+      <button class="ghost-btn" id="load-sample" type="button">Load sample</button>
+      <button class="ghost-btn" id="append-run" type="button">＋ Append run</button>
+      <div class="counts" id="status" aria-live="polite"></div>
+    </div>
+
+    <details class="drawer" id="drawer" open>
+      <summary>Inputs — history file &amp; append a raw Spectral run</summary>
+      <div class="io-grid">
+        <div class="io">
+          <h4>Run-series history <span class="muted">(YAML / JSON)</span>
+            <span class="io-btns"><button class="mini-btn" id="up-history" type="button">Upload</button><button class="mini-btn" id="dl-history" type="button">Download</button></span>
+          </h4>
+          <textarea id="history-text" spellcheck="false" placeholder="Paste your governance snapshot history…"></textarea>
+          <input type="file" id="file-history" accept=".yaml,.yml,.json" hidden />
+        </div>
+        <div class="io">
+          <h4>Append a run <span class="muted">(<code>spectral lint -f json</code>)</span>
+            <span class="io-btns"><button class="mini-btn" id="up-lint" type="button">Upload</button></span>
+          </h4>
+          <textarea id="lint-text" spellcheck="false" placeholder="Paste one Spectral JSON result to add as a dated snapshot…"></textarea>
+          <input type="file" id="file-lint" accept=".json,application/json" hidden />
+          <div class="aform">
+            <label>Run date<input id="run-date" type="date" /></label>
+            <div class="aform-actions"><button class="measure-btn" id="do-append" type="button">Append to history ▸</button></div>
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <main class="stage">
+      <section id="report"><div class="loading" id="loading">Loading…</div></section>
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
